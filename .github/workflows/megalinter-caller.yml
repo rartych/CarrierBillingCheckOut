@@ -23,5 +23,5 @@ permissions:
 jobs:
   megalinter:
     uses: rartych/xCAMARA-tooling/.github/workflows/megalinter.yml@main
-      with:
+    with:
       ref: carrier-billing
