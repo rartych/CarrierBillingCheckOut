@@ -16,7 +16,7 @@ permissions:
   issues: write
 
 jobs:
-  megalinter:
+  spectral:
     uses: rartych/xCAMARA-tooling/.github/workflows/spectral-oas.yml@main
     with:
       ref: main
