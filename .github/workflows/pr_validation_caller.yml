@@ -18,7 +18,7 @@ permissions:
   issues: write
 
 jobs:
-  megalinter:
+  pr_validation:
     uses: rartych/xCAMARA-tooling/.github/workflows/pr_validation.yml@main
     with:
       configurations: carrier-billing
