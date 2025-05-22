@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         continue-on-error: true
-        uses: ./
+      - uses: stoplightio/spectral-action@latest
         with:
           file_glob: 'code/API_definitions/*.yaml'
           spectral_ruleset: .spectral.yml
