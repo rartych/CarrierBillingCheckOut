@@ -1,5 +1,5 @@
 openapi: 3.0.10
-info:   
+info:  
   description: |-
     Service Enabling Payments against Operator Carrier Billing Systems
 
