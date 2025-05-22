@@ -20,6 +20,12 @@ permissions:
 jobs:
   pr_validation:
     uses: rartych/xCAMARA-tooling/.github/workflows/pr_validation.yml@main
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push, comment issues & post new PR
+      # Remove the ones you do not need
+      contents: write
+      issues: write
+      pull-requests: write
     secrets: inherit
     with:
       configurations: carrier-billing
