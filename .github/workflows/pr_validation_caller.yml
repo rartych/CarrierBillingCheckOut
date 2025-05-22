@@ -1,5 +1,5 @@
 name: Caller for PR validation workflow
-description: "This workflow calls the reusable workflow from toolong repository"
+# This workflow calls the reusable workflow from toolong repository
 
 on:
   # Pull Requests to main
