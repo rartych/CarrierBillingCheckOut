@@ -1,6 +1,6 @@
 on:
-  workflow_call:
-name: CI
+  - workflow_call
+name: Spectral
 jobs:
   spectralChecks:
     name: Spectral checks
