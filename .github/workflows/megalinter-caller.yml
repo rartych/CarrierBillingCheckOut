@@ -5,7 +5,7 @@ on:
 
   # Pull Requests to main
   pull_request:
-    branches: [master, main]
+    branches: main
 
 env: 
    branch_name: v2  
@@ -23,5 +23,5 @@ permissions:
 jobs:
   megalinter:
     uses: rartych/xCAMARA-tooling/.github/workflows/megalinter.yml@main
-    with:
-      ref: carrier-billing
+    #with:
+    #  ref: carrier-billing
