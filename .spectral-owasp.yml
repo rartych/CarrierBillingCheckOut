@@ -3,5 +3,5 @@ rules:
   owasp:api9:2023-inventory-access : off
   owasp:api8:2023-define-error-responses-500 : off
   owasp:api4:2023-rate-limit : off
-  owasp:api8:2023-define-cors-origi : off
+  owasp:api8:2023-define-cors-origin : off
   
