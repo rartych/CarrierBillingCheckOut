@@ -26,6 +26,8 @@ jobs:
       - name: Install Spectral
         run: npm install -g @stoplight/spectral
       - name: Install Spectral functions
+        run: npm install -g @stoplight/spectral-functions
+      - name: Install Spectral OWASP
         run: npm install -g @stoplight/spectral-owasp-ruleset
       - name: Run Spectral linting
         run: spectral lint code/API_definitions/*.yaml --verbose --ruleset .spectral-owasp.yml
