@@ -813,7 +813,6 @@ components:
             and meaningful to the server’s backend system for the purpose of reconciliation.
           example: "ref-pay-834tfr2rA3v8r8vr3rv-serv"
     AmountTransactionInput:
-      type: object
       required:
         - paymentAmount
         - referenceCode
