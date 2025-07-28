@@ -19,8 +19,8 @@ permissions:
 
 jobs:
   pr_validation:
-    uses: rartych/xCAMARA-tooling/.github/workflows/pr_validation.yml@main
+    uses: rartych/tooling/.github/workflows/pr_validation.yml@main
     secrets: inherit
     with:
-      configurations: carrier-billing
+      # configurations: carrier-billing
       github_token: ${{ github.token }}  # Correct way to reference GITHUB_TOKEN
