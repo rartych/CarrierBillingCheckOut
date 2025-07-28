@@ -1,4 +1,4 @@
-openapi: 3.0.32
+openapi: 3.0.33
 info:
   description: |-
     Service Enabling Payments against Operator Carrier Billing Systems
