@@ -23,3 +23,4 @@ jobs:
     secrets: inherit
     with:
       configurations: carrier-billing
+      github_token: ${{ secrets.GITHUB_TOKEN }}
