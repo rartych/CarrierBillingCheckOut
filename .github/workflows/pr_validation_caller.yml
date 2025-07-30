@@ -16,6 +16,8 @@ permissions:
   pull-requests: write
   contents: write
   issues: write
+  security-events: write
+  actions: read
 
 jobs:
   pr_validation:
