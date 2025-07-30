@@ -21,6 +21,6 @@ jobs:
   pr_validation:
     uses: rartych/tooling/.github/workflows/pr_validation.yml@main
     secrets: inherit
-    with:
+    # with:
       # configurations: carrier-billing
-      github_token: ${{ github.token }}  # Correct way to reference GITHUB_TOKEN
+
