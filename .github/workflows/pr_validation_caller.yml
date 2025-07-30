@@ -19,7 +19,8 @@ permissions:
 
 jobs:
   pr_validation:
-    uses: rartych/tooling/.github/workflows/pr_validation.yml@main
+    # uses: rartych/tooling/.github/workflows/pr_validation.yml@main
+    uses: camaraproject/tooling/.github/workflows/pr_validation.yml@fix-security-inheritence-ml
     secrets: inherit
     # with:
       # configurations: carrier-billing
