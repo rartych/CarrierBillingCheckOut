@@ -1,4 +1,4 @@
-openapi: 3.0.4 
+openapi: 3.0.4
 info:
   description: |-
     Service Enabling Payments against Operator Carrier Billing Systems
@@ -145,7 +145,7 @@ info:
 externalDocs:
   description: Product documentation at Camara
   url: https://github.com/camaraproject/CarrierBillingCheckOut
-servers:
+servers: 
   - url: "{apiRoot}/carrier-billing/v0.5rc1"
     variables:
       apiRoot:
