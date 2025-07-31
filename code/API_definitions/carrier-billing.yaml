@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.0.4
 info:
   description: |-
     Service Enabling Payments against Operator Carrier Billing Systems
@@ -136,7 +136,7 @@ info:
     # Further info and support
 
     (FAQs will be added in a later version of the documentation)
-  version: 0.5.0-rc.1
+  version: 0.5.0-rc.1 
   title: Carrier Billing
   license:
     name: Apache 2.0
@@ -145,7 +145,7 @@ info:
 externalDocs:
   description: Product documentation at Camara
   url: https://github.com/camaraproject/CarrierBillingCheckOut
-servers:
+servers: 
   - url: "{apiRoot}/carrier-billing/v0.5rc1"
     variables:
       apiRoot:
