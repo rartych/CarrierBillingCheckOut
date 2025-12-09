@@ -35,7 +35,7 @@ permissions:
 jobs:
   spectral:
   # Invoke the reusable PR validation workflow from the main branch of camaraproject/tooling
-    uses: camaraproject/tooling/.github/workflows/spectral-oas.yml@v0
+    uses: rartych/tooling/.github/workflows/spectral-oas.yml
 # Spectral configuration from the tooling repository subfolder of /linting/config/ indicated by `configurations` variable
 # If needed, you can specify a configuration from another subfolder of camaraproject/tooling/linting/config/ (uncomment below)
 #    with:
