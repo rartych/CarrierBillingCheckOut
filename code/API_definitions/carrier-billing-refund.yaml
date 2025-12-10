@@ -541,6 +541,7 @@ components:
       description: A list of refund(s)
       type: array
       minItems: 0
+      maxItems: 10
       items:
         $ref: "#/components/schemas/Refund"
     SinkCredential:
@@ -677,6 +678,7 @@ components:
       type: array
       description: Detailed description of the concepts/items considered within a specific refund procedure.
       minItems: 1
+      maxItems: 10
       items:
         $ref: "#/components/schemas/RefundItem"
     RefundItem:
