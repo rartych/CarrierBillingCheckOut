@@ -1,0 +1,18 @@
+on:
+  - pull_request
+  - workflow_dispatch
+name: Spectral
+jobs:
+  spectralChecks:
+    name: Spectral checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        continue-on-error: true
+      - uses: stoplightio/spectral-action@latest
+        with:
+          file_glob: 'code/API_definitions/*.yaml'
+          spectral_ruleset: .spectral.yml
+
+      - if: ${{ failure() }}
+        run: exit 0

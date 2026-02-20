@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3
 info:
   description: |-
     Service Enabling Payments against Operator Carrier Billing Systems
@@ -828,7 +828,6 @@ components:
             and meaningful to the server’s backend system for the purpose of reconciliation.
           example: "ref-pay-834tfr2rA3v8r8vr3rv-serv"
     AmountTransactionInput:
-      type: object
       required:
         - paymentAmount
         - referenceCode
