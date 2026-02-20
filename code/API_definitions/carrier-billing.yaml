@@ -46,10 +46,10 @@ info:
     - **Notification URL**: Developers may provide a callback URL (`sink` param) on which status change notifications, regarding the payment, can be received from the Telco Operator. This is an optional parameter.
 
     Following diagram shows the API resources operation sequencing:
-    ![PaymentSequence](https://raw.githubusercontent.com/camaraproject/CarrierBillingCheckOut/main/documentation/API_documentation/resources/Carrier_Billing_sequence_diagram.png)
+    ![PaymentSequence](https://raw.githubusercontent.com/camaraproject/CarrierBillingCheckOut/r3.2/documentation/API_documentation/resources/Carrier_Billing_sequence_diagram.png)
 
     Follow picture provides information about the payment state engine (state description & transition):
-    ![Payment State Engine](https://raw.githubusercontent.com/camaraproject/CarrierBillingCheckOut/main/documentation/API_documentation/resources/Carrier_Billing_State_Engine.JPG)
+    ![Payment State Engine](https://raw.githubusercontent.com/camaraproject/CarrierBillingCheckOut/r3.2/documentation/API_documentation/resources/Carrier_Billing_State_Engine.JPG)
 
     State transitions:
 
@@ -136,7 +136,7 @@ info:
     # Further info and support
 
     (FAQs will be added in a later version of the documentation)
-  version: 0.5.0-rc.1
+  version: 0.5.0
   title: Carrier Billing
   license:
     name: Apache 2.0
@@ -145,8 +145,8 @@ info:
 externalDocs:
   description: Product documentation at Camara
   url: https://github.com/camaraproject/CarrierBillingCheckOut
-servers: 
-  - url: "{apiRoot}/carrier-billing/v0.5rc1"
+servers:
+  - url: "{apiRoot}/carrier-billing/v0.5"
     variables:
       apiRoot:
         default: http://localhost:9091
@@ -648,11 +648,11 @@ components:
         paymentCreationDate:
           type: string
           format: date-time
-          description: Date time when the payment is created in server database. This is a technical information. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z).
+          description: Date time when the payment is created in server database. This is a technical information. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
         paymentDate:
           type: string
           format: date-time
-          description: Date time when the payment is effectively performed. This is a business information. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z).
+          description: Date time when the payment is effectively performed. This is a business information. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
         sink:
           type: string
           format: uri
@@ -686,11 +686,11 @@ components:
         paymentCreationDate:
           type: string
           format: date-time
-          description: Date time when the payment is created in server database. This is a technical information. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z).
+          description: Date time when the payment is created in server database. This is a technical information. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
         paymentDate:
           type: string
           format: date-time
-          description: Date time when the payment is effectively performed. This is a business information. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z).
+          description: Date time when the payment is effectively performed. This is a business information. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
         sink:
           type: string
           format: uri
@@ -744,7 +744,7 @@ components:
             accessTokenExpiresUtc:
               type: string
               format: date-time
-              description: REQUIRED. An absolute (UTC) timestamp at which the token shall be considered expired. Token expiration should occur after the expiration of the requested payment, allowing the client to be notified of any changes during the payment's existence. If the token expires while the payment is still active, the client will stop receiving notifications.
+              description: REQUIRED. An absolute (UTC) timestamp at which the token shall be considered expired. Token expiration should occur after the expiration of the requested payment, allowing the client to be notified of any changes during the payment's existence. If the token expires while the payment is still active, the client will stop receiving notifications. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
             accessTokenType:
               description: REQUIRED. Type of the access token (See [OAuth 2.0](https://tools.ietf.org/html/rfc6749#section-7.1)).
               type: string
@@ -767,7 +767,7 @@ components:
             accessTokenExpiresUtc:
               type: string
               format: date-time
-              description: REQUIRED. An absolute (UTC) timestamp at which the token shall be considered expired. Token expiration should occur after the expiration of the requested payment, allowing the client to be notified of any changes during the payment's existence. If the token expires while the payment is still active, the client will stop receiving notifications.
+              description: REQUIRED. An absolute (UTC) timestamp at which the token shall be considered expired. Token expiration should occur after the expiration of the requested payment, allowing the client to be notified of any changes during the payment's existence. If the token expires while the payment is still active, the client will stop receiving notifications. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
             accessTokenType:
               description: REQUIRED. Type of the access token (See [OAuth 2.0](https://tools.ietf.org/html/rfc6749#section-7.1)).
               type: string
@@ -919,7 +919,7 @@ components:
         paymentCreationDate:
           type: string
           format: date-time
-          description: Date time when the payment is created in server database. This is a technical information. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z).
+          description: Date time when the payment is created in server database. This is a technical information. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
         validationInfo:
           allOf:
             - $ref: "#/components/schemas/ValidationInfo"
@@ -1248,7 +1248,7 @@ components:
     DateTime:
       type: string
       format: date-time
-      description: Timestamp when the occurrence happened. Must adhere to RFC 3339.
+      description: Timestamp when the occurrence happened. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
       example: "2023-11-03T12:27:10Z"
     EventPaymentPendingValidation:
       description: Event structure for payment pending validation
@@ -1308,7 +1308,7 @@ components:
           properties:
             paymentDate:
               type: string
-              description: Date when the payment is effectively performed, both in 1-step and 2-step scenarios. This is a business information. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z).
+              description: Date when the payment is effectively performed, both in 1-step and 2-step scenarios. This is a business information. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
               format: date-time
               example: "2023-11-03T12:27:08.312Z"
     PaymentCancelled:
@@ -1353,19 +1353,19 @@ components:
     ErrorInfo:
       type: object
       required:
+        - status
         - code
         - message
-        - status
       properties:
-        code:
-          type: string
-          description: Code given to this error
         status:
           type: integer
           description: HTTP response status code
+        code:
+          type: string
+          description: A human-readable code to describe the error
         message:
           type: string
-          description: Detailed error description
+          description: A human-readable description of what the event represents
   responses:
     Generic400:
       description: Bad Request
@@ -2077,7 +2077,7 @@ components:
           - An identifier is not included in the request and the device or phone number identification cannot be derived from the 3-legged access token ("code": "MISSING_IDENTIFIER","message": "The phone number cannot be identified.")
           - An explicit identifier is provided when a device or phone number has already been identified from the access token ("code": "UNNECESSARY_IDENTIFIER","message": "The phone number is already identified by the access token.")
           - Unauthorized amount requested ("code": "CARRIER_BILLING.UNAUTHORIZED_AMOUNT","message": "Unauthorized amount requested.").
-          - Accumulated threshold amount for the user's mobile account overpassed ("code": "CARRIER_BILLING.USER_AMOUNT_THRESHOLD_OVERPASSED","message": "Unathorized payment request. Accumulated user mobile payments overpass account amount threshold.").
+          - Accumulated threshold amount for the user's mobile account overpassed ("code": "CARRIER_BILLING.USER_AMOUNT_THRESHOLD_OVERPASSED","message": "Unauthorized payment request. Accumulated user mobile payments overpass account amount threshold.").
       headers:
         x-correlator:
           $ref: "#/components/headers/x-correlator"
@@ -2130,7 +2130,7 @@ components:
               value:
                 status: 422
                 code: CARRIER_BILLING.USER_AMOUNT_THRESHOLD_OVERPASSED
-                message: "Unathorized payment request. Accumulated user mobile payments overpass account amount threshold."
+                message: "Unauthorized payment request. Accumulated user mobile payments overpass account amount threshold."
     PaymentSecondStepUnprocessable422:
       description: |-
         Client indicates content that is understable by the Server but unable to be processed.
@@ -2224,7 +2224,7 @@ components:
         type: integer
         default: 10
     StartPaymentCreationDate:
-      description: Initial `paymentCreationDate` for running the query. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z)
+      description: Initial `paymentCreationDate` for running the query. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
       in: query
       name: paymentCreationDate.gte
       required: false
@@ -2232,7 +2232,7 @@ components:
         format: date-time
         type: string
     EndPaymentCreationDate:
-      description: End `paymentCreationDate` for running the query. It must follow RFC 3339 and must have time zone. Recommended format is yyyy-MM-dd'T'HH:mm:ss.SSSZ (i.e. which allows 2023-07-03T14:27:08.312+02:00 or 2023-07-03T12:27:08.312Z)
+      description: End `paymentCreationDate` for running the query. It must follow [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) and must have time zone.
       in: query
       name: paymentCreationDate.lte
       required: false
